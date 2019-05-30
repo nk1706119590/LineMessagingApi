@@ -19,7 +19,7 @@ namespace FunctionAppSample
         static HttpTriggerFunction()
         {
             lineMessagingClient = new LineMessagingClient(
-                Environment.GetEnvironmentVariable("ChannelAccessToken"));
+                Environment.GetEnvironmentVariable("JOALJaFzXSS1/Iw0lRElqFUMiBHUF4LhFisSOpo9WpfG4Ju5l+o+o5yTWeYVIqOhwPafmf63J283XV1uMahQlwgdfCxzlKipJygVt7h4z9Fbt0mq+eQivXcy4jj4oyvvH8a6cp39m8SO/3I9OyLmVgdB04t89/1O/w1cDnyilFU="));
             var sp = ServicePointManager.FindServicePoint(new Uri("https://api.line.me"));
             sp.ConnectionLeaseTimeout = 60 * 1000;
         }
@@ -35,7 +35,7 @@ namespace FunctionAppSample
             try
             {
                 log.Info("C# HTTP trigger function processed a request.");
-                var channelSecret = Environment.GetEnvironmentVariable("ChannelSecret");
+                var channelSecret = Environment.GetEnvironmentVariable("7410da12768dbb3db2632dd64ed33a12");
                 var events = await req.GetWebhookEventsAsync(channelSecret);
 
                 var connectionString = Environment.GetEnvironmentVariable("AzureWebJobsStorage");
